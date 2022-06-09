@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
-function App() {
+import web3 from './web3';
+
+const App = () => {
+
+  console.log(web3.version)
+
+  web3.eth.getAccounts().then(console.log) // get all acounts that metamask provided by our installed web3
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    <div>App</div>
+  )
 }
 
-export default App;
+export default App
